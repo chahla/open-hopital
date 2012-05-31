@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="userManagement" transaction-type="RESOURCE_LOCAL">
+	
+		<class>com.openHopital.userManagement.entity.User</class>
+		<class>com.openHopital.userManagement.entity.Authorities</class>
+		<class>com.openHopital.userManagement.entity.Groups</class>
+		<class>com.openHopital.userManagement.entity.UserDetail</class>
+		<class>com.openHopital.userManagement.entity.Address</class>
+		<properties>
+         <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>
+         <property name="hibernate.hbm2ddl.auto" value="update"/>
+         <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@10.208.60.179:1521:xe"/>
+         <property name="javax.persistence.jdbc.user" value="dunkinweb"/>
+         <property name="javax.persistence.jdbc.password" value="t6SbjWI8UOZZNo"/>
+         <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+      </properties>
+	</persistence-unit>
+</persistence>

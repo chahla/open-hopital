@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<!-- a SessionFactory instance listed as /jndi/name -->
+	<session-factory name="userManagement">
+	
+   
+		<!-- <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="connection.url">jdbc:oracle:thin:@10.208.60.179:1521:xe</property>
+		<property name="connection.username">dunkinweb</property>
+		<property name="connection.password">t6SbjWI8UOZZNo</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>			
+		<property name="dialect">org.hibernate.dialect.Oracle10gDialect</property> -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/openhospital</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>			
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		
+		<mapping class="com.openHopital.userManagement.entity.User"/>
+<mapping class="com.openHopital.userManagement.entity.Authorities"/>
+<mapping class="com.openHopital.userManagement.entity.Groups"/>
+<mapping class="com.openHopital.userManagement.entity.UserDetail"/>
+<mapping class="com.openHopital.userManagement.entity.Address"/>
+	</session-factory>
+
+</hibernate-configuration>
