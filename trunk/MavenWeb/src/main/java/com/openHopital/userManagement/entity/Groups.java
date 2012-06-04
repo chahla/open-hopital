@@ -17,12 +17,12 @@ import org.hibernate.annotations.ForeignKey;
 public class Groups implements Serializable {
 
 	private static final long serialVersionUID = 3992890378060588591L;
-	
+
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	private int id;	
+	private int id;
 	private String groupName;
-	@ForeignKey(inverseName="Authorities",name="fk_group_authorities_group")
+	@ForeignKey(inverseName = "Authorities", name = "fk_group_authorities_group")
 	private int authorityId;
 
 	public Groups() {

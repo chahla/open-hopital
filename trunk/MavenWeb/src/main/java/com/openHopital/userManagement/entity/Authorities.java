@@ -13,7 +13,7 @@ import org.hibernate.annotations.ForeignKey;
  * 
  */
 @Entity
-@ForeignKey (name="fk_authorities_users",inverseName="USERS")
+@ForeignKey(name = "fk_authorities_users", inverseName = "USERS")
 public class Authorities implements Serializable {
 
 	private static final long serialVersionUID = -2883901917977075955L;
