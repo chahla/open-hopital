@@ -56,7 +56,6 @@ public class User implements UserDetails, Serializable {
 		this.username = username;
 	}
 
-
 	public int getGroupId() {
 		return groupId;
 	}

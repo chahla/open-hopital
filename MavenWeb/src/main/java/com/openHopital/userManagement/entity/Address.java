@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 /**
  * Entity implementation class for Entity: Address
- *
+ * 
  */
 @Entity
 public class Address implements Serializable {
@@ -23,80 +23,65 @@ public class Address implements Serializable {
 	private String pincode;
 	private String email;
 	private boolean status;
-	
-	
+
 	public Address() {
 		super();
 	}
-
 
 	public int getAddressId() {
 		return addressId;
 	}
 
-
 	public void setAddressId(int addressId) {
 		this.addressId = addressId;
 	}
-
 
 	public String getHouseNumber() {
 		return houseNumber;
 	}
 
-
 	public void setHouseNumber(String houseNumber) {
 		this.houseNumber = houseNumber;
 	}
-
 
 	public String getCity() {
 		return city;
 	}
 
-
 	public void setCity(String city) {
 		this.city = city;
 	}
-
 
 	public String getStreet() {
 		return street;
 	}
 
-
 	public void setStreet(String street) {
 		this.street = street;
 	}
-
 
 	public String getPincode() {
 		return pincode;
 	}
 
-
 	public void setPincode(String pincode) {
 		this.pincode = pincode;
 	}
-
 
 	public String getEmail() {
 		return email;
 	}
 
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 
 	public boolean isStatus() {
 		return status;
 	}
 
-
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-   
+
 }
