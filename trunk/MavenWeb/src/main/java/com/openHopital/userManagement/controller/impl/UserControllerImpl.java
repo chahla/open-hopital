@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.openHopital.userManagement.controller.UserController;
-import com.openHopital.userManagement.dao.UserDaoImpl;
+import com.openHopital.userManagement.dao.impl.UserDaoImpl;
 import com.openHopital.userManagement.entity.User;
 
 @Transactional

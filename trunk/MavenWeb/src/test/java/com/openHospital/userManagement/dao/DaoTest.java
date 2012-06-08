@@ -8,11 +8,11 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import com.openHopital.userManagement.dao.AuthoritiesDao;
-import com.openHopital.userManagement.dao.AuthoritiesDaoImpl;
 import com.openHopital.userManagement.dao.GroupsDao;
-import com.openHopital.userManagement.dao.GroupsDaoImpl;
 import com.openHopital.userManagement.dao.UserDao;
-import com.openHopital.userManagement.dao.UserDaoImpl;
+import com.openHopital.userManagement.dao.impl.AuthoritiesDaoImpl;
+import com.openHopital.userManagement.dao.impl.GroupsDaoImpl;
+import com.openHopital.userManagement.dao.impl.UserDaoImpl;
 import com.openHopital.userManagement.entity.Authorities;
 import com.openHopital.userManagement.entity.Groups;
 import com.openHopital.userManagement.entity.User;
@@ -24,14 +24,14 @@ public class DaoTest {
 		EntityManager em = getEntityManager("userManagement");
 
 		Authorities authorities = new Authorities();
-		authorities.setAuthority("authority");
+		authorities.setAuthority("authority1");
 		AuthoritiesDao autherityDao = new AuthoritiesDaoImpl();
 		autherityDao.setEntityManager(em);
 
 		Groups group = new Groups();
 		group.setId(1);
 		group.setAuthorityId(1);
-		group.setGroupName("groupName");
+		group.setGroupName("groupName1");
 		GroupsDao groupDao = new GroupsDaoImpl();
 		groupDao.setEntityManager(em);
 
@@ -43,9 +43,9 @@ public class DaoTest {
 		user.setAccountNonLocked(true);
 		user.setCredentialsNonExpired(true);
 		user.setGroupId(group.getId());
-		user.setPassword("password");
+		user.setPassword("password1");
 		user.setSystemAuthorities(authuritiesList);
-		user.setUsername("username");
+		user.setUsername("username1");
 		UserDao userDao = new UserDaoImpl();
 		userDao.setEntityManager(em);
 
