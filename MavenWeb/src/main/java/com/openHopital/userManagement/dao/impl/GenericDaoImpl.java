@@ -1,21 +1,26 @@
-package com.openHopital.userManagement.dao;
+package com.openHopital.userManagement.dao.impl;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Map;
 
+import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-public abstract class GenericDaoJpaImpl<T> implements GenericDao<T> {
+import com.openHopital.userManagement.dao.GenericDao;
 
-	@PersistenceContext
+
+
+public abstract class GenericDaoImpl<T> implements GenericDao<T> {
+
+	@PersistenceContext(unitName = "userManagement")
 	protected EntityManager entityManager;
 
 	private Class<T> type;
 
-	public GenericDaoJpaImpl() {
+	public GenericDaoImpl() {
 		Type t = getClass().getGenericSuperclass();
 
 		ParameterizedType pt = (ParameterizedType) t;
