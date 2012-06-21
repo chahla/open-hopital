@@ -19,11 +19,13 @@ public class MoviesTest{
 	@Test
     public void test() throws Exception {
 		
-		
+		/*
 		final Properties p = new Properties();
         p.put("MavenWebDatabase", "new://Resource?type=DataSource");      
-        p.put("MavenWebDatabase.JdbcDriver", "oracle.jdbc.OracleDriver");
-        p.put("MavenWebDatabase.JdbcUrl", "jdbc:oracle:thin:@10.203.62.82:1521:xe;user=test;password=test;");
+       // p.put("MavenWebDatabase.JdbcDriver", "oracle.jdbc.OracleDriver");
+       // p.put("MavenWebDatabase.JdbcUrl", "jdbc:oracle:thin:@10.203.62.82:1521:xe;user=test;password=test;");
+     //p.put("MavenWebDatabase.JdbcDriver", "com.mysql.jdbc.Driver");
+     //p.put("MavenWebDatabase.JdbcUrl", "jdbc:mysql://localhost:3306/openhospital;user=root;password=root;");
         //p.put("MavenWebDatabase.user", "test");
        //p.put("MavenWebDatabase.password", "test");
 
@@ -46,6 +48,6 @@ public class MoviesTest{
 		
 		authoritiesDao.find("authority");
 
-        
+        */
     }
 }
